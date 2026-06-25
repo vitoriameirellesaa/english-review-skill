@@ -1,0 +1,20 @@
+{
+  "name": "english-review-marketplace",
+  "owner": {
+    "name": "Vitória Meirelles",
+    "url": "https://github.com/vitoriameirellesaa"
+  },
+  "metadata": {
+    "description": "A Notion-backed spaced-repetition skill for reviewing English vocabulary and grammar."
+  },
+  "plugins": [
+    {
+      "name": "english-review",
+      "source": "./skills/english-review",
+      "description": "Review and retain English vocabulary and grammar with spaced repetition, reading directly from two Notion databases.",
+      "version": "1.0.0",
+      "category": "learning",
+      "tags": ["english", "language-learning", "notion", "spaced-repetition"]
+    }
+  ]
+}
