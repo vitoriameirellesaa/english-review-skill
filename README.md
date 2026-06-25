@@ -18,7 +18,23 @@ Built around an **external anchor** (a recurring lesson, e.g. a weekly class): r
 
 ## Setup
 
-### 1. Create the two Notion databases
+You need Claude with the **Notion connector** enabled before either path below.
+
+### Quick setup (recommended)
+
+Instead of building the databases by hand, paste the prompt in [`SETUP_PROMPT.md`](SETUP_PROMPT.md) into Claude. It creates both databases with the correct fields and hands you back the three IDs, already formatted to paste into the skill.
+
+Then:
+1. Open `skills/english-review/SKILL.md` and replace `<NOTION_PAGE_ID>`, `<VOCABULARY_DATA_SOURCE_ID>` and `<GRAMMAR_DATA_SOURCE_ID>` with the IDs Claude gave you.
+2. Install (see step 4 below).
+
+That's it. The manual steps below are the same thing done by hand, if you prefer.
+
+---
+
+### Manual setup
+
+#### 1. Create the two Notion databases
 
 Create a Notion page (e.g. "English") and two databases inside it.
 
@@ -48,11 +64,11 @@ Create a Notion page (e.g. "English") and two databases inside it.
 
 > You can rename properties, but if you do, update the schema section in `SKILL.md` to match.
 
-### 2. Get the IDs
+#### 2. Get the IDs
 
 For each database, open it in Notion, click **Share → Copy link**. The ID is the 32-character string in the URL. The page ID comes from the parent page's URL the same way.
 
-### 3. Fill in the placeholders
+#### 3. Fill in the placeholders
 
 In `skills/english-review/SKILL.md`, replace:
 
@@ -60,26 +76,6 @@ In `skills/english-review/SKILL.md`, replace:
 - `<VOCABULARY_DATA_SOURCE_ID>` — the Vocabulary database ID
 - `<GRAMMAR_DATA_SOURCE_ID>` — the Grammar database ID
 
-In `.claude-plugin/marketplace.json` and `skills/english-review/.claude-plugin/plugin.json`, replace `Vitória Meirelles` and `vitoriameirellesaa`.
-
-### 4. Install
+#### 4. Install
 
 In Claude Code:
-
-```
-/plugin marketplace add vitoriameirellesaa/<YOUR_REPO_NAME>
-/plugin install english-review@english-review-marketplace
-```
-
-## Customizing
-
-The skill is set up for a learner at an intermediate level whose interests/context aren't hardcoded — it asks for fresh context each session. If you want it tuned to your level or with a fixed "base repertoire" of topics (work, hobbies, etc.), edit the relevant lines in `SKILL.md`. It's just a markdown file.
-
-## Notes
-
-- The skill always shows you what it's about to write to Notion and waits for your "ok" before writing.
-- A read-only "review queue" view in Notion (sorted by confidence + date) is handy for visual review, though the skill sorts on its own.
-
-## License
-
-MIT — see [LICENSE](LICENSE).
