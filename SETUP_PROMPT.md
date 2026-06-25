@@ -1,6 +1,6 @@
 I want to set up two Notion databases for an English-learning spaced-repetition system. Please create them on a new (or existing) Notion page called "English", using the Notion connector, with these EXACT property names and types.
 
-Database 1 — "Vocabulary":
+Database 1 — Vocabulary:
 - Term (EN) — Title
 - Meaning — Text
 - Example — Text
@@ -9,7 +9,7 @@ Database 1 — "Vocabulary":
 - Learned on — Date
 - Last review — Date
 
-Database 2 — "Grammar":
+Database 2 — Grammar:
 - Topic — Title
 - Rule summary — Text
 - Examples — Text
@@ -20,8 +20,8 @@ Database 2 — "Grammar":
 
 After creating both databases, please give me the following three IDs, each on its own line, in exactly this format so I can paste them into the skill's SKILL.md file:
 
-NOTION_PAGE_ID = (the ID of the "English" page)
+NOTION_PAGE_ID = (the ID of the English page)
 VOCABULARY_DATA_SOURCE_ID = (the ID of the Vocabulary database)
 GRAMMAR_DATA_SOURCE_ID = (the ID of the Grammar database)
 
-Each ID is the 32-character string from the page/database URL. Don't create any sample rows — leave both databases empty.
+Each ID is the 32-character string from the page or database URL. Don't create any sample rows — leave both databases empty.
