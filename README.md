@@ -78,4 +78,22 @@ In `skills/english-review/SKILL.md`, replace:
 
 #### 4. Install
 
+```
+/plugin marketplace add vitoriameirellesaa/english-review-skill
+/plugin install english-review@english-review-marketplace
+```
+
+## Customizing
+
+The skill is set up for a learner at an intermediate level whose interests/context aren't hardcoded — it asks for fresh context each session. If you want it tuned to your level or with a fixed "base repertoire" of topics (work, hobbies, etc.), edit the relevant lines in `SKILL.md`. It's just a markdown file.
+
+## Notes
+
+- The skill always shows you what it's about to write to Notion and waits for your "ok" before writing.
+- A read-only "review queue" view in Notion (sorted by confidence + date) is handy for visual review, though the skill sorts on its own.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
 In Claude Code:
